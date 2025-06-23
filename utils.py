@@ -12,7 +12,7 @@ logging.basicConfig(
 
 
 def get_schoolkid_by_name(name_part):
-    """Находит одного ученика по части имени и логирует ошибки"""
+   
     try:
         return Schoolkid.objects.get(full_name__icontains=name_part)
     except Schoolkid.DoesNotExist:
